@@ -5,6 +5,9 @@ import uvicorn
 # Initialize FastMCP Server
 mcp = FastMCP("Instagram Video Analyzer")
 
+# Expose ASGI app for Uvicorn
+app = mcp.http_app()
+
 # Safely read the key from the terminal environment variable
 api_key = os.getenv("GEMINI_API_KEY")
 
