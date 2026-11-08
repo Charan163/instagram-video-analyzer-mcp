@@ -19,5 +19,6 @@ def analyze_instagram_video(url: str) -> str:
     return f"Backend active. Ready to process Instagram Reel: {url}"
 
 if __name__ == "__main__":
-    print("🚀 Local Instagram Video Analyzer Backend starting on http://localhost:8000 ...")
-    mcp.run(transport="sse", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    # Replace uvicorn.run or fastmcp run line with:
+    uvicorn.run("setup_complete:app", host="0.0.0.0", port=port)
