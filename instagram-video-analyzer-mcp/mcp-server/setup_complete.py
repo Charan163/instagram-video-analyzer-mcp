@@ -31,8 +31,8 @@ def analyze_instagram_video(
     )
 
 
-# Expose SSE ASGI application for ChatGPT / MCP Clients
-app = mcp.sse_app()
+# Expose standard ASGI HTTP app (FastMCP handles SSE routes internally)
+app = mcp.http_app()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
