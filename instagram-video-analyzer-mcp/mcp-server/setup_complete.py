@@ -1,5 +1,6 @@
 import os
 from fastmcp import FastMCP
+import uvicorn
 
 # Initialize FastMCP Server
 mcp = FastMCP("Instagram Video Analyzer")
@@ -20,5 +21,4 @@ def analyze_instagram_video(url: str) -> str:
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
-    # Replace uvicorn.run or fastmcp run line with:
     uvicorn.run("setup_complete:app", host="0.0.0.0", port=port)
