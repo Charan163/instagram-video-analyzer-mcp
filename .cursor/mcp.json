@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "instagram-video-analyzer": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:/Users/yanag/OneDrive/Desktop/Instagram bot/instagram-video-analyzer-mcp/mcp-server",
+        "run",
+        "setup_complete.py"
+      ],
+      "env": {
+        "API_BASE_URL": "http://localhost:8000"
+      }
+    }
+  }
+}
