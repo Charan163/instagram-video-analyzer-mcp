@@ -1,0 +1,4 @@
+fastmcp
+uvicorn
+google-genai
+yt-dlp
